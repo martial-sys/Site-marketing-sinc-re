@@ -1017,51 +1017,21 @@ src="https://www.facebook.com/tr?id=1400667957768581&ev=PageView&noscript=1"
             <div class="timer">
                 <p>ATTENTION: CETTE OFFRE SPÉCIALE EXPIRE DANS</p>
                 <div class="timer-grid">
-               <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const timerHours = document.querySelectorAll('.timer-number')[0];
-    const timerMinutes = document.querySelectorAll('.timer-number')[1];
-    const timerSeconds = document.querySelectorAll('.timer-number')[2];
-
-    const VISIT_KEY = 'firstVisitTime';
-    let countdownDuration = 48 * 60 * 60 * 1000; // 48h en millisecondes
-    let firstVisit = localStorage.getItem(VISIT_KEY);
-
-    if (!firstVisit) {
-        firstVisit = new Date().getTime();
-        localStorage.setItem(VISIT_KEY, firstVisit);
-    } else {
-        firstVisit = parseInt(firstVisit);
-    }
-
-    const deadline = firstVisit + countdownDuration;
-
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const timeLeft = deadline - now;
-
-        if (timeLeft <= 0) {
-            timerHours.textContent = '00';
-            timerMinutes.textContent = '00';
-            timerSeconds.textContent = '00';
-            return;
-        }
-
-        const hours = Math.floor(timeLeft / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        timerHours.textContent = hours.toString().padStart(2, '0');
-        timerMinutes.textContent = minutes.toString().padStart(2, '0');
-        timerSeconds.textContent = seconds.toString().padStart(2, '0');
-
-        setTimeout(updateCountdown, 1000);
-    }
-
-    updateCountdown();
-});
-	       </script>
-            </div>
+                    <div class="timer-unit">
+                        <div class="timer-number">36</div>
+                        <div>Heures</div>
+                    </div>
+                    <div class="timer-unit">
+                        <div class="timer-number">47</div>
+                        <div>Minutes</div>
+                    </div>
+                    <div class="timer-unit">
+                        <div class="timer-number">18</div>
+                        <div>Secondes</div>
+                    </div>
+                </div>
+	    </div>
+        
             
             <div class="price-box">
                 <h3>Offre Limitée</h3>
