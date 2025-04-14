@@ -1471,6 +1471,54 @@ Utilise ce guide comme un accompagnement stratégique, et reste toujours vigilan
         });
     });
 });
+	    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const timerHours = document.querySelectorAll('.timer-number')[0];
+    const timerMinutes = document.querySelectorAll('.timer-number')[1];
+    const timerSeconds = document.querySelectorAll('.timer-number')[2];
+
+    const TIMER_KEY = 'offerDeadline';
+
+    function generateNewDeadline() {
+        const now = new Date().getTime();
+        const randomDuration = Math.floor(Math.random() * (172800000 - 1800000 + 1)) + 1800000; // 30min to 48h
+        const newDeadline = now + randomDuration;
+        localStorage.setItem(TIMER_KEY, newDeadline);
+        return newDeadline;
+    }
+
+    function updateCountdown() {
+        let deadline = localStorage.getItem(TIMER_KEY);
+
+        if (!deadline) {
+            deadline = generateNewDeadline();
+        } else {
+            deadline = parseInt(deadline);
+        }
+
+        const now = new Date().getTime();
+        let timeLeft = deadline - now;
+
+        // Si le délai est écoulé, on génère un nouveau compte à rebours
+        if (timeLeft <= 0) {
+            deadline = generateNewDeadline();
+            timeLeft = deadline - now;
+        }
+
+        const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        timerHours.textContent = hours.toString().padStart(2, '0');
+        timerMinutes.textContent = minutes.toString().padStart(2, '0');
+        timerSeconds.textContent = seconds.toString().padStart(2, '0');
+
+        setTimeout(updateCountdown, 1000);
+    }
+
+    updateCountdown();
+});
+</script>
     	</script>
 <!-- Google Analytics 4 avec événements personnalisés -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZDBJMMCWT"></script>
