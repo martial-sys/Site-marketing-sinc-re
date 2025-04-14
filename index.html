@@ -1334,45 +1334,7 @@ Utilise ce guide comme un accompagnement stratégique, et reste toujours vigilan
     `;
     document.head.appendChild(style);
     
-    // Compteur à rebours
-    function startCountdown() {
-        // Définir la date de fin (48 heures à partir de maintenant)
-        const now = new Date();
-        const endDate = new Date(now);
-        endDate.setHours(now.getHours() + 48);
-        
-        function updateTimer() {
-            const currentTime = new Date();
-            const diff = endDate - currentTime;
-            
-            if (diff <= 0) {
-                // Le compteur est terminé
-                document.querySelector('.timer-number:nth-child(1)').textContent = '00';
-                document.querySelector('.timer-number:nth-child(2)').textContent = '00';
-                document.querySelector('.timer-number:nth-child(3)').textContent = '00';
-                return;
-            }
-            
-            // Calculer les heures, minutes, secondes
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            // Mettre à jour le compteur
-            document.querySelectorAll('.timer-number')[0].textContent = hours.toString().padStart(2, '0');
-            document.querySelectorAll('.timer-number')[1].textContent = minutes.toString().padStart(2, '0');
-            document.querySelectorAll('.timer-number')[2].textContent = seconds.toString().padStart(2, '0');
-            
-            // Mettre à jour toutes les secondes
-            setTimeout(updateTimer, 1000);
-        }
-        
-        // Démarrer le compteur
-        updateTimer();
-    }
     
-    // Démarrer le compteur à rebours
-    startCountdown();
     
     // Animation d'entrée pour les éléments au défilement
     const animateOnScroll = () => {
@@ -1388,7 +1350,54 @@ Utilise ce guide comme un accompagnement stratégique, et reste toujours vigilan
             }
         });
     };
-    
+    <script>
+				  document.addEventListener('DOMContentLoaded', function () {
+    const timerHours = document.querySelectorAll('.timer-number')[0];
+    const timerMinutes = document.querySelectorAll('.timer-number')[1];
+    const timerSeconds = document.querySelectorAll('.timer-number')[2];
+
+    const TIMER_KEY = 'offerDeadline';
+
+    function generateNewDeadline() {
+        const now = new Date().getTime();
+        // Ajouter exactement 48 heures (en millisecondes)
+        const newDeadline = now + (48 * 60 * 60 * 1000);
+        localStorage.setItem(TIMER_KEY, newDeadline);
+        return newDeadline;
+    }
+
+    function updateCountdown() {
+        let deadline = localStorage.getItem(TIMER_KEY);
+
+        if (!deadline) {
+            deadline = generateNewDeadline();
+        } else {
+            deadline = parseInt(deadline);
+        }
+
+        const now = new Date().getTime();
+        let timeLeft = deadline - now;
+
+        // Si le délai est écoulé, génère un nouveau compte à rebours
+        if (timeLeft <= 0) {
+            deadline = generateNewDeadline();
+            timeLeft = deadline - now;
+        }
+
+        const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        timerHours.textContent = hours.toString().padStart(2, '0');
+        timerMinutes.textContent = minutes.toString().padStart(2, '0');
+        timerSeconds.textContent = seconds.toString().padStart(2, '0');
+
+        setTimeout(updateCountdown, 1000);
+    }
+
+    updateCountdown();
+});
+    </script>
     // Ajouter des styles pour les animations au défilement
     const scrollStyle = document.createElement('style');
     scrollStyle.textContent = `
@@ -1472,54 +1481,7 @@ Utilise ce guide comme un accompagnement stratégique, et reste toujours vigilan
         });
     });
 });
-	    <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const timerHours = document.querySelectorAll('.timer-number')[0];
-    const timerMinutes = document.querySelectorAll('.timer-number')[1];
-    const timerSeconds = document.querySelectorAll('.timer-number')[2];
-
-    const TIMER_KEY = 'offerDeadline';
-
-    function generateNewDeadline() {
-        const now = new Date().getTime();
-        const randomDuration = Math.floor(Math.random() * (172800000 - 1800000 + 1)) + 1800000; // 30min to 48h
-        const newDeadline = now + randomDuration;
-        localStorage.setItem(TIMER_KEY, newDeadline);
-        return newDeadline;
-    }
-
-    function updateCountdown() {
-        let deadline = localStorage.getItem(TIMER_KEY);
-
-        if (!deadline) {
-            deadline = generateNewDeadline();
-        } else {
-            deadline = parseInt(deadline);
-        }
-
-        const now = new Date().getTime();
-        let timeLeft = deadline - now;
-
-        // Si le délai est écoulé, on génère un nouveau compte à rebours
-        if (timeLeft <= 0) {
-            deadline = generateNewDeadline();
-            timeLeft = deadline - now;
-        }
-
-        const hours = Math.floor(timeLeft / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        timerHours.textContent = hours.toString().padStart(2, '0');
-        timerMinutes.textContent = minutes.toString().padStart(2, '0');
-        timerSeconds.textContent = seconds.toString().padStart(2, '0');
-
-        setTimeout(updateCountdown, 1000);
-    }
-
-    updateCountdown();
-});
-</script>
+	    
     	</script>
 <!-- Google Analytics 4 avec événements personnalisés -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZDBJMMCWT"></script>
