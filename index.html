@@ -691,24 +691,73 @@ src="https://www.facebook.com/tr?id=1400667957768581&ev=PageView&noscript=1"
         .bonus-title span {
             margin-right: 10px;
         }
+        .sommaire ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    justify-content: center;
+}
+.sommaire ul li a {
+    background: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sommaire ul li a:hover {
+    background: #003f80;
+}
     </style>
+    <style>
+@keyframes flashHighlight {
+  0% { background-color: #fff9c4; }
+  50% { background-color: #fff176; }
+  100% { background-color: transparent; }
+}
+html, body {
+  height: auto;
+  overflow: auto;
+  scroll-behavior: auto !important; /* on désactive celui de base */
+  overscroll-behavior: none;
+}
+html, body {
+  scroll-behavior: auto !important;
+  height: auto;
+  overflow: auto;
+}
+</style>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h2>Guide Ultime Pour Immigrer Au Canada | Spécial Afrique Francophone</h2>
-        </div>
-    </header>
-    
-    <section class="hero">
-        <div class="container">
-            <h1>👋 Bonjour</h1>
-            <p>Je partage avec toi ce guide complet créé par un Africain qui a vécu les galères de l'immigration - pour t'éviter de perdre ton temps et ton argent comme moi.</p>
-            <a href="#get-guide" class="cta-button">Obtenir le Guide à 4.900 FCFA</a>
-            <p><small>Édition 2025 • Plus de 3500 exemplaires vendus • Mise à jour Avril 2025</small></p>
-        </div>
-    </section>
-    
+<header style="background: linear-gradient(135deg, #e52d27 0%, #8e0e00 100%); padding: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; position: relative;">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; padding: 0 15px;">
+    <div style="flex: 0 0 100px; margin-right: 20px;">
+      <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67d37b8fe92b5_Monlogo.jpg" alt="Logo Guide Immigration Canada" style="max-width: 100%; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+    </div>
+    <div style="flex: 1; min-width: 280px; text-align: left;">
+      <h1 style="color: #fff; font-size: 2rem; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Guide Ultime Pour Immigrer Au Canada🇨🇦</h1>
+      <h2 style="color: #fff; font-size: 1.3rem; font-weight: normal; margin-top: 0; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Spécial Afrique Francophone • Édition 2025</h2>
+    </div>
+  </div>
+  </div>
+</header>
+<section style="padding: 40px 20px; background-color: #f9f9f9; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; max-width: 1200px; margin: 0 auto;">
+  <div style="flex: 1; min-width: 300px; padding-right: 30px;">
+    <h2 style="color: #333; font-size: 1.6rem; margin-bottom: 20px;">👋 Le seul guide d'immigration créé par un Africain qui a vécu les galères de l'immigration canadienne </h2>
+    <p style="color: #555; font-size: 1.1rem; line-height: 1.6;">Je partage avec toi ce guide complet pour t'éviter de perdre ton temps et ton argent comme moi. <span style="font-weight: bold; color: #e52d27;">Une méthode simple et sans arnaque pour réussir ton projet canadien.</span></p>
+    <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px;">
+      <p style="margin: 0; color: #856404; font-weight: 500;">Mis à jour en Avril 2025 avec les dernières procédures d'immigration canadiennes pour francophones africains.</p>
+    </div>
+    <a href="#pricing" style="display: inline-block; background-color: #e52d27; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); transition: all 0.3s ease;">Obtenir le Guide à 4.900 FCFA</a>
+  </div>
+  <div style="flex: 1; min-width: 300px; text-align: center; padding: 20px;">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Guide d'Immigration au Canada" style="max-width: 100%; height: auto; box-shadow: 0 10px 20px rgba(0,0,0,0.15); border-radius: 8px;">
+    <p style="font-size: 0.85rem; color: #777; margin-top: 10px;">Édition 2025 • Plus de 3500 exemplaires vendus</p>
+  </div>
+</section>
     <section class="section">
         <div class="container">
             <div class="personal-story-box">
@@ -842,31 +891,164 @@ src="https://www.facebook.com/tr?id=1400667957768581&ev=PageView&noscript=1"
                 <a href="#get-guide" class="cta-button">Obtenir mon guide maintenant</a>
             </div>
         </div>
-    </section>
-    
-    <section class="section testimonials">
-        <div class="container">
-            <h2 class="section-title">Ce que disent nos lecteurs</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>J'avais dépensé plus de 2 millions FCFA avec une agence qui m'a laissé tomber. Grâce à ce guide, j'ai refait mon dossier moi-même et j'ai obtenu mon visa en 6 mois. L'investissement le plus rentable de ma vie!</p>
-                    <span class="testimonial-author">Mamadou S.</span>
-                    <span class="testimonial-location">Dakar, Sénégal → Montréal</span>
-                </div>
-                <div class="testimonial-card">
-                    <p>Les modèles de CV et de lettres de motivation ont fait toute la différence. J'ai décroché une offre d'emploi après seulement 5 candidatures. Les employeurs canadiens répondaient enfin à mes demandes!</p>
-                    <span class="testimonial-author">Fatou K.</span>
-                    <span class="testimonial-location">Abidjan, Côte d'Ivoire → Toronto</span>
-                </div>
-                <div class="testimonial-card">
-                    <p>En tant que Camerounais, je rencontrais des obstacles spécifiques pour mes documents. Le guide m'a donné des solutions alternatives acceptées par les autorités canadiennes. Sans cela, j'aurais abandonné!</p>
-                    <span class="testimonial-author">Jean-Paul N.</span>
-                    <span class="testimonial-location">Douala, Cameroun → Québec</span>
-                </div>
-            </div>
+<section style="padding: 40px 20px; background-color: #fff; max-width: 1000px; margin: 0 auto;">
+  <h2 style="text-align: center; color: #333; margin-bottom: 30px;">Ce que disent nos lecteurs</h2>
+  
+  <!-- Carrousel de témoignages avec images -->
+  <div style="margin-bottom: 30px; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+    <!-- Container du carrousel -->
+    <div id="testimonial-carousel" style="width: 100%; height: 400px; position: relative; overflow: hidden;">
+      <!-- Image 1 -->
+      <div class="carousel-slide" style="position: absolute; width: 100%; height: 100%; opacity: 1; transition: opacity 0.5s ease-in-out; display: flex; flex-direction: column;">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67d5746fd5d61_1001833901.png" alt="Témoignage WhatsApp" style="width: 100%; height: 75%; object-fit: cover;">
+        <div style="padding: 15px; background-color: rgba(0,0,0,0.7); color: white; height: 25%;">
+          <h4 style="margin: 0 0 5px 0;">Souleymane M. - Bamako, Mali → Montréal</h4>
+          <p style="margin: 0; font-size: 0.95rem; line-height: 1.4;">
+            "Le guide m'a sauvé! Les conseils sur la préparation des documents étaient parfaits et j'ai obtenu mon visa du premier coup. Merci infiniment pour ce travail qui change des vies."
+          </p>
         </div>
-    </section>
+      </div>
+      
+      <!-- Image 2 -->
+      <div class="carousel-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease-in-out; display: flex; flex-direction: column;">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67d56ce7242f5_1001833810.png" alt="Témoignage WhatsApp" style="width: 100%; height: 75%; object-fit: cover;">
+        <div style="padding: 15px; background-color: rgba(0,0,0,0.7); color: white; height: 25%;">
+          <h4 style="margin: 0 0 5px 0;">Aminata D. - Dakar, Sénégal → Québec</h4>
+          <p style="margin: 0; font-size: 0.95rem; line-height: 1.4;">
+            "Après deux refus, j'étais désespérée. Ce guide m'a donné les clés pour comprendre mes erreurs. Mon visa a été approuvé la semaine dernière! Je n'y crois toujours pas!"
+          </p>
+        </div>
+      </div>
+      
+      <!-- Image 3 -->
+      <div class="carousel-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease-in-out; display: flex; flex-direction: column;">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67d5f6b2e25a4_1001835505.png" alt="Témoignage WhatsApp" style="width: 100%; height: 75%; object-fit: cover;">
+        <div style="padding: 15px; background-color: rgba(0,0,0,0.7); color: white; height: 25%;">
+          <h4 style="margin: 0 0 5px 0;">Ibrahim T. - Abidjan, Côte d'Ivoire → Ottawa</h4>
+          <p style="margin: 0; font-size: 0.95rem; line-height: 1.4;">
+            "Les conseils pour préparer l'entretien et la biométrie ont été décisifs. J'ai pu éviter les erreurs classiques et j'ai reçu mon approbation en seulement 4 mois."
+          </p>
+        </div>
+      </div>
+    </div>
     
+    <!-- Contrôles du carrousel -->
+    <div style="position: absolute; bottom: 15px; width: 100%; display: flex; justify-content: center; gap: 10px;">
+      <div id="dot-0" class="carousel-dot" style="width: 12px; height: 12px; background-color: white; border-radius: 50%; cursor: pointer; opacity: 1;"></div>
+      <div id="dot-1" class="carousel-dot" style="width: 12px; height: 12px; background-color: white; border-radius: 50%; cursor: pointer; opacity: 0.5;"></div>
+      <div id="dot-2" class="carousel-dot" style="width: 12px; height: 12px; background-color: white; border-radius: 50%; cursor: pointer; opacity: 0.5;"></div>
+    </div>
+    
+    <!-- Flèches du carrousel -->
+    <div id="prev-btn" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background-color: rgba(0,0,0,0.3); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer;">❮</div>
+    <div id="next-btn" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background-color: rgba(0,0,0,0.3); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer;">❯</div>
+  </div>
+  
+  <!-- Témoignages textuels en grille -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+    <!-- Témoignage 1 -->
+    <div style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+      <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <div style="width: 45px; height: 45px; background-color: #28a745; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 15px;">MS</div>
+        <div>
+          <h4 style="margin: 0; color: #333;">Mamadou S.</h4>
+          <p style="margin: 0; color: #666; font-size: 0.9rem;">Dakar, Sénégal → Montréal</p>
+        </div>
+      </div>
+      <p style="color: #555; font-size: 0.95rem; line-height: 1.5; margin: 0;">
+        "J'avais dépensé plus de 2 millions FCFA avec une agence qui m'a laissé tomber. Grâce à ce guide, j'ai refait mon dossier moi-même et j'ai obtenu mon visa. L'investissement le plus rentable de ma vie!"
+      </p>
+    </div>
+    
+    <!-- Témoignage 2 -->
+    <div style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+      <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <div style="width: 45px; height: 45px; background-color: #007bff; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 15px;">FK</div>
+        <div>
+          <h4 style="margin: 0; color: #333;">Fatou K.</h4>
+          <p style="margin: 0; color: #666; font-size: 0.9rem;">Abidjan, Côte d'Ivoire → Toronto</p>
+        </div>
+      </div>
+      <p style="color: #555; font-size: 0.95rem; line-height: 1.5; margin: 0;">
+        "Les modèles de CV et de lettres de motivation ont fait toute la différence. J'ai décroché une offre d'emploi après seulement 5 candidatures! Les employeurs canadiens répondaient enfin à mes demandes!"
+      </p>
+    </div>
+    
+    <!-- Témoignage 3 -->
+    <div style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+      <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <div style="width: 45px; height: 45px; background-color: #dc3545; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 15px;">JN</div>
+        <div>
+          <h4 style="margin: 0; color: #333;">Jean-Paul N.</h4>
+          <p style="margin: 0; color: #666; font-size: 0.9rem;">Douala, Cameroun → Québec</p>
+        </div>
+      </div>
+      <p style="color: #555; font-size: 0.95rem; line-height: 1.5; margin: 0;">
+        "En tant que Camerounais, je rencontrais des obstacles spécifiques pour mes documents. Le guide m'a donné des solutions alternatives acceptées par les autorités canadiennes. Sans cela, j'aurais abandonné!"
+      </p>
+    </div>
+    
+    <!-- Témoignage 4 -->
+    <div style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+      <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <div style="width: 45px; height: 45px; background-color: #6610f2; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 15px;">PK</div>
+        <div>
+          <h4 style="margin: 0; color: #333;">Pierre K.</h4>
+          <p style="margin: 0; color: #666; font-size: 0.9rem;">Kinshasa, RDC → Vancouver</p>
+        </div>
+      </div>
+      <p style="color: #555; font-size: 0.95rem; line-height: 1.5; margin: 0;">
+        "Franchement soulagé, j'avais peur de mal remplir les formulaires, mais avec ce guide j'ai tout vérifié étape par étape. Les astuces et tous les montants déjà convertis en FCFA m'ont vraiment rassuré."
+      </p>
+    </div>
+  </div>
+
+  <!-- Script pour le carrousel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.carousel-slide');
+      const dots = document.querySelectorAll('.carousel-dot');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      let currentSlide = 0;
+      
+      // Fonction pour afficher une slide
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.opacity = i === index ? '1' : '0';
+        });
+        dots.forEach((dot, i) => {
+          dot.style.opacity = i === index ? '1' : '0.5';
+        });
+        currentSlide = index;
+      }
+      
+      // Événements pour les boutons
+      prevBtn.addEventListener('click', () => {
+        const newIndex = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(newIndex);
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        const newIndex = (currentSlide + 1) % slides.length;
+        showSlide(newIndex);
+      });
+      
+      // Événements pour les points
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          showSlide(i);
+        });
+      });
+      
+      // Défilement automatique
+      setInterval(() => {
+        const newIndex = (currentSlide + 1) % slides.length;
+        showSlide(newIndex);
+      }, 5000);
+    });
+  </script>
+</section>
     <section class="section benefits">
         <div class="container">
             <h2 class="section-title">Ce que tu obtiens concrètement</h2>
@@ -1011,83 +1193,284 @@ src="https://www.facebook.com/tr?id=1400667957768581&ev=PageView&noscript=1"
     
     <section class="section price-section" id="get-guide">
         <div class="container">
-            <h2 class="section-title">Protège ton rêve canadien</h2>
-            <p>Mieux vaut investir un peu aujourd'hui que de perdre des millions dans des erreurs évitables.</p>
-            
-            <div class="timer">
-                <p>ATTENTION: CETTE OFFRE SPÉCIALE EXPIRE DANS</p>
-                <div class="timer-grid">
-                    <div class="timer-unit">
-                        <div class="timer-number">48</div>
-                        <div>Heures</div>
-                    </div>
-                    <div class="timer-unit">
-                        <div class="timer-number">37</div>
-                        <div>Minutes</div>
-                    </div>
-                    <div class="timer-unit">
-                        <div class="timer-number">18</div>
-                        <div>Secondes</div>
-                    </div>
-                </div>
-	    </div>
-        
-            
-            <div class="price-box">
-                <h3>Offre Limitée</h3>
-                <h4>Guide Ultime + Bonus Exclusifs</h4>
-                <div class="price-original">14.500 FCFA</div>
-                <div class="price-current">4.900 FCFA</div>
-                <div class="price-savings">Économise 9.600 FCFA (66%)</div>
-                <p>Paiement unique - Accès à vie</p>
-                
-                <div class="what-you-get-items" style="margin: 2rem 0;">
-                    <div class="what-you-get-item">
-                        <span>✅</span>
-                        <div>Guide complet (format PDF) - 100+ pages</div>
-                    </div>
-                    <div class="what-you-get-item">
-                        <span>✅</span>
-                        <div>12 modèles et templates personnalisables</div>
-                    </div>
-                    <div class="what-you-get-item">
-                        <span>✅</span>
-                        <div>Calculateurs interactifs d'admissibilité</div>
-                    </div>
-                    <div class="what-you-get-item">
-                        <span>✅</span>
-                        <div>Groupe Telegram exclusif d'entraide</div>
-                    </div>
-                    <div class="what-you-get-item">
-                        <span>✅</span>
-                        <div>Mises à jour gratuites pendant 2 ans</div>
-                    </div>
-                    <div class="what-you-get-item">
-                        <span>✅</span>
-                        <div>BONUS 1: Liste des entreprises qui recrutent des Africains</div>
-                    </div>
-                    <div class="what-you-get-item">
-                        <span>✅</span>
-                        <div>BONUS 2: Guide des villes canadiennes pour francophones</div>
-                    </div>
-                </div>
-                
-                <p><strong>Il reste seulement 17 guides à ce prix</strong></p>
-                
-                <a href="https://uowkorva.mychariow.com/prd_xni6no/checkout" class="cta-button">Obtenir le Guide Maintenant</a>
-                
-                <p style="margin-top: 1rem;">Paiement mobile et Orange Money acceptés</p>
-                
-                <div class="guarantee">
-                    <div>🛡️</div>
-                    <div class="guarantee-text">
-                        <strong>Garantie satisfait ou remboursé 30 jours</strong>
-                        <p>Si tu n'es pas entièrement satisfait, nous te remboursons intégralement. Sans question ni condition.</p>
-                    </div>
-                </div>
-            </div>
+            <h2 class="section-title">Protège ton rêve canadien</h2>            
+  <div style="background-color: #f9f9f9; border-radius: 8px; padding: 20px; margin: 30px auto; max-width: 800px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
+  <h3 style="color: #e52d27; margin-top: 0; margin-bottom: 15px;">Offre Spéciale Limitée</h3>
+  <p style="color: #333; font-size: 1.1rem; margin-bottom: 15px;">Cette promotion se termine le 30 avril 2025</p>
+ 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compte à rebours</title>
+    <style>
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .countdown-item {
+            background-color: #e52d27;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            min-width: 60px;
+            text-align: center;
+        }
+        .countdown-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .countdown-label {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-container" id="countdown">
+        <div class="countdown-item">
+            <div class="countdown-number" id="days">13</div>
+            <div class="countdown-label">Jours</div>
         </div>
-    </section>
+        <div class="countdown-item">
+            <div class="countdown-number" id="hours">05</div>
+            <div class="countdown-label">Heures</div>
+        </div>
+        <div class="countdown-item">
+            <div class="countdown-number" id="minutes">37</div>
+            <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+            <div class="countdown-number" id="seconds">18</div>
+            <div class="countdown-label">Secondes</div>
+        </div>
+    </div>
+
+    <script>
+        // Définir la date cible (13 jours, 5 heures, 37 minutes et 18 secondes à partir de maintenant)
+        const now = new Date();
+        const targetDate = new Date(now);
+        targetDate.setDate(targetDate.getDate() + 13);
+        targetDate.setHours(targetDate.getHours() + 5);
+        targetDate.setMinutes(targetDate.getMinutes() + 37);
+        targetDate.setSeconds(targetDate.getSeconds() + 18);
+
+        // Éléments DOM
+        const daysElement = document.getElementById('days');
+        const hoursElement = document.getElementById('hours');
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+
+        // Fonction pour ajouter un zéro devant les nombres < 10
+        function padWithZero(num) {
+            return num < 10 ? `0${num}` : num;
+        }
+
+        // Fonction pour mettre à jour le compte à rebours
+        function updateCountdown() {
+            const now = new Date();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+                // Compte à rebours terminé
+                daysElement.textContent = '00';
+                hoursElement.textContent = '00';
+                minutesElement.textContent = '00';
+                secondsElement.textContent = '00';
+                clearInterval(timer);
+                return;
+            }
+
+            // Calcul des jours, heures, minutes et secondes restants
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((difference / 1000 / 60) % 60);
+            const seconds = Math.floor((difference / 1000) % 60);
+
+            // Mise à jour de l'affichage
+            daysElement.textContent = padWithZero(days);
+            hoursElement.textContent = padWithZero(hours);
+            minutesElement.textContent = padWithZero(minutes);
+            secondsElement.textContent = padWithZero(seconds);
+        }
+
+        // Mise à jour initiale
+        updateCountdown();
+
+        // Mise à jour toutes les secondes
+        const timer = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
+
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur de Guides Limités</title>
+    <style>
+        .limited-offer {
+            font-weight: bold;
+            color: #333;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        .highlight {
+            color: #e52d27;
+        }
+    </style>
+</head>
+<body>
+    <p class="limited-offer" id="limited-guides">
+        Il reste seulement <span class="highlight" id="guides-count">17</span> guides à ce prix
+    </p>
+
+    <script>
+        // Configuration
+        const endDate = new Date('2025-04-30T23:59:59'); // Date de fin: 30 avril 2025
+        const maxGuides = 20; // Nombre maximum de guides au départ
+        const minGuides = 3;  // Nombre minimum de guides à la fin
+        
+        // Fonction pour générer un nombre aléatoire entre min et max
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        
+        // Fonction pour calculer le nombre de guides restants
+        function calculateRemainingGuides() {
+            const now = new Date();
+            
+            // Si la date de fin est dépassée, on affiche le minimum
+            if (now >= endDate) {
+                return minGuides;
+            }
+            
+            // Calcul du pourcentage de temps écoulé (0% = début, 100% = fin)
+            const totalTimespan = endDate - new Date('2025-04-17T00:00:00'); // Du 17 avril au 30 avril
+            const timeElapsed = now - new Date('2025-04-17T00:00:00');
+            const percentageElapsed = Math.min(1, Math.max(0, timeElapsed / totalTimespan));
+            
+            // Nombre de guides théorique basé sur le temps restant
+            const theoreticalGuides = Math.round(maxGuides - percentageElapsed * (maxGuides - minGuides));
+            
+            // Ajout d'un peu d'aléatoire, mais en gardant une tendance à la baisse
+            const variation = Math.min(3, theoreticalGuides * 0.2); // Variation de ±20% mais max 3
+            const randomOffset = getRandomInt(-variation, variation);
+            
+            // Le nombre final de guides avec un minimum de minGuides
+            return Math.max(minGuides, theoreticalGuides + randomOffset);
+        }
+        
+        // Mise à jour initiale
+        document.getElementById('guides-count').textContent = calculateRemainingGuides();
+        
+        // Mise à jour du nombre de guides à chaque chargement de page
+        // et stockage en session pour éviter des changements trop brusques
+        // lors des rechargements de page
+        window.addEventListener('load', function() {
+            // Vérifier si nous avons une valeur en session
+            const storedCount = sessionStorage.getItem('guidesCount');
+            const storedTime = sessionStorage.getItem('guidesCountTime');
+            
+            let currentCount;
+            
+            if (storedCount && storedTime) {
+                const timeDiff = Date.now() - parseInt(storedTime);
+                // Si moins de 30 minutes se sont écoulées, on utilise la valeur stockée
+                if (timeDiff < 30 * 60 * 1000) {
+                    currentCount = parseInt(storedCount);
+                    
+                    // Possibilité de diminuer de 1 occasionnellement
+                    if (Math.random() < 0.3 && currentCount > minGuides) {
+                        currentCount--;
+                    }
+                } else {
+                    // Plus de 30 minutes, on recalcule
+                    currentCount = calculateRemainingGuides();
+                }
+            } else {
+                // Pas de valeur stockée, on calcule
+                currentCount = calculateRemainingGuides();
+            }
+            
+            // Mise à jour de l'affichage
+            document.getElementById('guides-count').textContent = currentCount;
+            
+            // Stockage en session
+            sessionStorage.setItem('guidesCount', currentCount);
+            sessionStorage.setItem('guidesCountTime', Date.now());
+        });
+    </script>
+</body>
+</html>
+</div>            
+       <section id="pricing" style="background: linear-gradient(to bottom, #f9f9f9, #fff); padding: 50px 20px; text-align: center; max-width: 1000px; margin: 0 auto;">
+  <h2 style="color: #333; margin-bottom: 15px;">Protège ton rêve canadien</h2>
+  <p style="color: #555; font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px;">Mieux vaut investir un peu aujourd'hui que de perdre des millions dans des erreurs évitables.</p>
+  
+  <div style="background-color: #fff; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); padding: 30px; max-width: 600px; margin: 0 auto; border-top: 5px solid #e52d27;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <h3 style="color: #333; margin: 0;">Guide Ultime + Bonus Exclusifs</h3>
+      <div style="background-color: #28a745; color: white; padding: 5px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">ÉCONOMIE 66%</div>
+    </div>
+    
+    <div style="display: flex; justify-content: center; align-items: center; margin: 25px 0;">
+      <div style="text-align: center; margin-right: 20px;">
+        <p style="text-decoration: line-through; color: #999; font-size: 1.2rem; margin: 0;">14.500 FCFA</p>
+        <p style="color: #e52d27; font-size: 2.5rem; font-weight: bold; margin: 0;">4.900 FCFA</p>
+        <p style="color: #666; font-size: 0.9rem; margin: 5px 0 0;">Paiement unique - Accès à vie</p>
+      </div>
+      <img src="https://d1yei2z3i6k35z.cloudfront.net/11365804/67ef218caf45f_1001897714.png" alt="Guide d'Immigration au Canada" style="max-width: 120px; height: auto; border-radius: 5px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+    </div>
+    
+    <ul style="text-align: left; list-style: none; padding: 0; margin: 25px 0;">
+      <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+        <span style="color: #28a745; margin-right: 10px; font-size: 1.2rem;">✅</span>
+        <span>Guide complet (format PDF) - 100+ pages</span>
+      </li>
+      <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+        <span style="color: #28a745; margin-right: 10px; font-size: 1.2rem;">✅</span>
+        <span>12 modèles et templates personnalisables</span>
+      </li>
+      <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+        <span style="color: #28a745; margin-right: 10px; font-size: 1.2rem;">✅</span>
+        <span>Calculateurs interactifs d'admissibilité</span>
+      </li>
+      <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+        <span style="color: #28a745; margin-right: 10px; font-size: 1.2rem;">✅</span>
+        <span>Groupe Telegram exclusif d'entraide</span>
+      </li>
+      <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+        <span style="color: #28a745; margin-right: 10px; font-size: 1.2rem;">✅</span>
+        <span>Mises à jour gratuites pendant 2 ans</span>
+      </li>
+      <li style="margin-bottom: 12px; display: flex; align-items: flex-start; font-weight: bold;">
+        <span style="color: #28a745; margin-right: 10px; font-size: 1.2rem;">✅</span>
+        <span>BONUS 1: Liste des entreprises qui recrutent des Africains</span>
+      </li>
+      <li style="margin-bottom: 12px; display: flex; align-items: flex-start; font-weight: bold;">
+        <span style="color: #28a745; margin-right: 10px; font-size: 1.2rem;">✅</span>
+        <span>BONUS 2: Guide des villes canadiennes pour francophones</span>
+      </li>
+    </ul>
+    
+    <a href="#" style="display: block; background-color: #e52d27; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.2rem; margin: 20px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: all 0.3s ease;">Obtenir le Guide Maintenant</a>
+    
+    <p style="color: #666; font-size: 0.9rem; margin: 0;">Paiement mobile et Orange Money acceptés</p>
+    
+    <div style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
+      <span style="color: #333; margin-right: 10px; font-size: 1.5rem;">🛡️</span>
+      <div>
+        <p style="font-weight: bold; color: #333; margin: 0;">Garantie satisfait ou remboursé 30 jours</p>
+        <p style="color: #666; font-size: 0.9rem; margin: 5px 0 0;">Si tu n'es pas entièrement satisfait, nous te remboursons intégralement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
     
     <section class="section faq">
         <div class="container">
@@ -1180,7 +1563,7 @@ src="https://www.facebook.com/tr?id=1400667957768581&ev=PageView&noscript=1"
             </div>
             
             <p class="disclaimer">
-                Ce guide a été élaboré à partir de sources officielles et d'expériences vérifiées pour vous aider à réussir votre projet d'immigration vers le Canada. Nous vous fournissons des outils pratiques et des conseils fiables pour vous accompagner tout au long de votre démarche. Utilisez ce guide comme un support stratégique pour maximiser vos chances de succès.
+                Ce guide est basé sur des informations fiables et à jour pour t'aider dans ton projet d'immigration. Les résultats peuvent varier selon ta situation et les lois en vigueur. Suis les étapes et mets toutes les chances de ton côté.
             </p>
             
             <p>© 2025 Guide Ultime Pour Immigrer Au Canada. Tous droits réservés.</p>
@@ -1330,7 +1713,45 @@ src="https://www.facebook.com/tr?id=1400667957768581&ev=PageView&noscript=1"
     `;
     document.head.appendChild(style);
     
+    // Compteur à rebours
+    function startCountdown() {
+        // Définir la date de fin (48 heures à partir de maintenant)
+        const now = new Date();
+        const endDate = new Date(now);
+        endDate.setHours(now.getHours() + 48);
+        
+        function updateTimer() {
+            const currentTime = new Date();
+            const diff = endDate - currentTime;
+            
+            if (diff <= 0) {
+                // Le compteur est terminé
+                document.querySelector('.timer-number:nth-child(1)').textContent = '00';
+                document.querySelector('.timer-number:nth-child(2)').textContent = '00';
+                document.querySelector('.timer-number:nth-child(3)').textContent = '00';
+                return;
+            }
+            
+            // Calculer les heures, minutes, secondes
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            // Mettre à jour le compteur
+            document.querySelectorAll('.timer-number')[0].textContent = hours.toString().padStart(2, '0');
+            document.querySelectorAll('.timer-number')[1].textContent = minutes.toString().padStart(2, '0');
+            document.querySelectorAll('.timer-number')[2].textContent = seconds.toString().padStart(2, '0');
+            
+            // Mettre à jour toutes les secondes
+            setTimeout(updateTimer, 1000);
+        }
+        
+        // Démarrer le compteur
+        updateTimer();
+    }
     
+    // Démarrer le compteur à rebours
+    startCountdown();
     
     // Animation d'entrée pour les éléments au défilement
     const animateOnScroll = () => {
@@ -1346,55 +1767,7 @@ src="https://www.facebook.com/tr?id=1400667957768581&ev=PageView&noscript=1"
             }
         });
     };
-    <script>
-				  document.addEventListener('DOMContentLoaded', function () {
-    const timerHours = document.querySelectorAll('.timer-number')[0];
-    const timerMinutes = document.querySelectorAll('.timer-number')[1];
-    const timerSeconds = document.querySelectorAll('.timer-number')[2];
-
-    const TIMER_KEY = 'offerDeadline';
-
-    function generateNewDeadline() {
-        const now = new Date().getTime();
-        // Ajouter exactement 48 heures (en millisecondes)
-        const newDeadline = now + (48 * 60 * 60 * 1000);
-        localStorage.setItem(TIMER_KEY, newDeadline);
-        return newDeadline;
-    }
-
-    function updateCountdown() {
-        let deadline = localStorage.getItem(TIMER_KEY);
-
-        if (!deadline) {
-            deadline = generateNewDeadline();
-        } else {
-            deadline = parseInt(deadline);
-        }
-
-        const now = new Date().getTime();
-        let timeLeft = deadline - now;
-
-        // Si le délai est écoulé, génère un nouveau compte à rebours
-        if (timeLeft <= 0) {
-            deadline = generateNewDeadline();
-            timeLeft = deadline - now;
-        }
-
-        const hours = Math.floor(timeLeft / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        timerHours.textContent = hours.toString().padStart(2, '0');
-        timerMinutes.textContent = minutes.toString().padStart(2, '0');
-        timerSeconds.textContent = seconds.toString().padStart(2, '0');
-
-        setTimeout(updateCountdown, 1000);
-    }
-
-    updateCountdown();
-});
-    </script>
-	<script>
+    
     // Ajouter des styles pour les animations au défilement
     const scrollStyle = document.createElement('style');
     scrollStyle.textContent = `
@@ -1478,7 +1851,6 @@ src="https://www.facebook.com/tr?id=1400667957768581&ev=PageView&noscript=1"
         });
     });
 });
-	    
     	</script>
 <!-- Google Analytics 4 avec événements personnalisés -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZDBJMMCWT"></script>
@@ -1551,222 +1923,149 @@ src="https://www.facebook.com/tr?id=1400667957768581&ev=PageView&noscript=1"
     }
   });
 </script>
+<!-- Fin Google Analytics 4 -->
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
-    // Fonctionnalité des onglets
-    document.querySelectorAll('.preview-tab').forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Supprimer la classe active de tous les onglets
-            document.querySelectorAll('.preview-tab').forEach(t => {
-                t.classList.remove('active');
-            });
+    // Fonction pour le compte à rebours
+    function initializeCountdown() {
+        // Date de fin : 30 avril 2025
+        const endDate = new Date('2025-04-30T23:59:59').getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = endDate - now;
             
-            // Ajouter la classe active à l'onglet cliqué
-            tab.classList.add('active');
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
-            // Masquer tous les panneaux
-            document.querySelectorAll('.preview-panel').forEach(panel => {
-                panel.classList.remove('active');
-            });
-            
-            // Afficher le panneau correspondant
-            const tabId = tab.getAttribute('data-tab');
-            document.getElementById(tabId).classList.add('active');
-        });
-    });
-    
-    // Fonctionnalité FAQ - Version corrigée
-    document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', () => {
-            // Réinitialiser tous les autres
-            document.querySelectorAll('.faq-question').forEach(q => {
-                if (q !== question) q.classList.remove('active');
-            });
-            
-            document.querySelectorAll('.faq-answer').forEach(a => {
-                if (a !== question.nextElementSibling) {
-                    a.classList.remove('active');
+            // Mise à jour des éléments du compte à rebours
+            document.querySelectorAll('[style*="background-color: #e52d27"]').forEach((element, index) => {
+                const value = [days, hours, minutes, seconds][index];
+                if (value !== undefined) {
+                    const numberDiv = element.querySelector('div:first-child');
+                    if (numberDiv) {
+                        numberDiv.textContent = value.toString().padStart(2, '0');
+                    }
                 }
             });
-            
-            // Activer/désactiver la question cliquée
-            question.classList.toggle('active');
-            
-            // Activer/désactiver la réponse
-            const answer = question.nextElementSibling;
-            if (answer && answer.classList.contains('faq-answer')) {
-                answer.classList.toggle('active');
-            }
-        });
-    });
-    
-    // Effet de défilement doux pour les liens d'ancrage
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 100,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Effet de lumière pour les boutons CTA
-    const ctaButtons = document.querySelectorAll('.cta-button');
-    
-    ctaButtons.forEach(button => {
-        // Créer l'élément de lumière
-        const light = document.createElement('span');
-        light.classList.add('btn-light-effect');
-        
-        // Ajouter des styles pour l'effet de lumière
-        button.style.position = 'relative';
-        button.style.overflow = 'hidden';
-        
-        // Ajouter l'élément de lumière au bouton
-        button.appendChild(light);
-        
-        // Animation de l'effet de lumière
-        setInterval(() => {
-            light.classList.add('active');
-            setTimeout(() => {
-                light.classList.remove('active');
-            }, 1000);
-        }, 3000);
-    });
-    
-    // Ajouter les styles CSS pour l'effet de lumière
-    const style = document.createElement('style');
-    style.textContent = `
-        .btn-light-effect {
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            pointer-events: none;
-            transition: none;
-        }
-        .btn-light-effect.active {
-            left: 100%;
-            transition: left 1s ease-in-out;
-        }
-        
-        .problem-card, .benefit-card, .testimonial-card, .what-you-get-item {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        .price-current, .price-savings, .timer {
-            animation: pulse 2s infinite;
-        }
-    `;
-    document.head.appendChild(style);
-    
-    // Animation d'entrée pour les éléments au défilement
-    const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.problem-card, .benefit-card, .testimonial-card, .what-you-get-item');
-        
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-            
-            if (elementPosition < screenPosition) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-    };
-    
-    // Minuteur de compte à rebours
-    const timerHours = document.querySelectorAll('.timer-number')[0];
-    const timerMinutes = document.querySelectorAll('.timer-number')[1];
-    const timerSeconds = document.querySelectorAll('.timer-number')[2];
+          </script>
 
-    const TIMER_KEY = 'offerDeadline';
-
-    function generateNewDeadline() {
-        const now = new Date().getTime();
-        // Ajouter exactement 48 heures (en millisecondes)
-        const newDeadline = now + (48 * 60 * 60 * 1000);
-        localStorage.setItem(TIMER_KEY, newDeadline);
-        return newDeadline;
-    }
-
-    function updateCountdown() {
-        let deadline = localStorage.getItem(TIMER_KEY);
-
-        if (!deadline) {
-            deadline = generateNewDeadline();
-        } else {
-            deadline = parseInt(deadline);
-        }
-
-        const now = new Date().getTime();
-        let timeLeft = deadline - now;
-
-        // Si le délai est écoulé, génère un nouveau compte à rebours
-        if (timeLeft <= 0) {
-            deadline = generateNewDeadline();
-            timeLeft = deadline - now;
-        }
-
-        const hours = Math.floor(timeLeft / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        timerHours.textContent = hours.toString().padStart(2, '0');
-        timerMinutes.textContent = minutes.toString().padStart(2, '0');
-        timerSeconds.textContent = seconds.toString().padStart(2, '0');
-
-        setTimeout(updateCountdown, 1000);
-    }
-
-    updateCountdown();
-    
-    // Animation pour les nombres restants
-    const remainingGuides = document.querySelector('.price-box p strong');
-    if (remainingGuides) {
-        let countDisplay = parseInt(remainingGuides.textContent.match(/\d+/)[0]);
-        
-        // Diminuer aléatoirement le nombre affiché
-        setInterval(() => {
-            if (countDisplay > 3) {
-                if (Math.random() < 0.3) { // 30% de chance de diminuer
-                    countDisplay--;
-                    remainingGuides.textContent = `Il reste seulement ${countDisplay} guides à ce prix`;
-                    
-                    // Effet flash
-                    remainingGuides.style.color = '#e74c3c';
-                    setTimeout(() => {
-                        remainingGuides.style.color = '';
-                    }, 300);
+  <script
+ // Fonction pour le défilement doux
+    function initializeSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
-            }
-        }, 8000);
+            });
+        });
     }
-    
-    // Exécuter animateOnScroll au chargement et au défilement
-    window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Exécuter une fois au chargement
+    </script>
+   <script>
+// Initialisation de toutes les fonctionnalités
+    initializeCountdown();
+    initializeScrollAnimation();
+    initializeTestimonialCarousel();
+    initializeFAQ();
+    initializeSmoothScroll();
 });
-		
 	</script>
-<!-- Fin Google Analytics 4 -->
+	<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      });
+    });
+  });
+</script>
+<script>
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>
+<script>
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true,
+    smoothTouch: true
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>
+<script>
+  // 1. Détection du scroll à 50%
+  window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const pageHeight = document.documentElement.scrollHeight;
+    if ((scrollPosition / pageHeight) > 0.5 && !window.hasScrolledHalf) {
+      window.hasScrolledHalf = true;
+      gtag('event', 'scroll_depth_50', {
+        event_category: 'engagement',
+        event_label: 'Scrolled 50%'
+      });
+    }
+  });
+
+  // 2. Clic sur le bouton principal avec class="cta-button"
+  document.addEventListener('DOMContentLoaded', function() {
+    const cta = document.querySelector('.cta-button');
+    if (cta) {
+      cta.addEventListener('click', function() {
+        gtag('event', 'click_cta', {
+          event_category: 'engagement',
+          event_label: 'Bouton principal cliqué'
+        });
+      });
+    }
+  });
+
+  // 3. Compte à rebours atteint zéro (date fixe)
+  function detectCountdownZero() {
+    const endDate = new Date('2025-04-30T23:59:59').getTime();
+    const now = new Date().getTime();
+    if (endDate - now <= 0 && !window.countdownSent) {
+      window.countdownSent = true;
+      gtag('event', 'countdown_zero', {
+        event_category: 'timing',
+        event_label: 'Fin du compte à rebours'
+      });
+    }
+  }
+  setInterval(detectCountdownZero, 1000);
+</script>
 </body>
 </html>
